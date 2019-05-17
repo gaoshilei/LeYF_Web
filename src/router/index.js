@@ -6,7 +6,6 @@ Vue.use(Router);
 import appModule from './appModule'
 import adminModule from './adminModule'
 
-
 const constantRouterMap = [
   ...appModule,
   ...adminModule,

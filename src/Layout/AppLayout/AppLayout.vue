@@ -1,17 +1,31 @@
 <template>
   <div class="app-wrapper">
+    <app-header></app-header>
     <app-main></app-main>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-  import AppMain from './AppMain';
+  import {AppHeader, AppMain, AppFooter} from './components';
+
   export default {
     name: "AppLayout",
-    components: {AppMain}
+    components: {AppHeader, AppMain, AppFooter}
   }
 </script>
 
-<style scoped>
+<style lang="scss">
+
+  a {
+    outline: 0;
+    word-break: break-all;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    &:active, &:focus, &:hover {
+      color: #eb5055;
+      outline: 0
+    }
+  }
 
 </style>

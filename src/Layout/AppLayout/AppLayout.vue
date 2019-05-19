@@ -18,12 +18,13 @@
 <style lang="scss">
 
   a {
+    color: #313131;
     outline: 0;
     word-break: break-all;
     text-decoration: none;
     text-overflow: ellipsis;
     &:active, &:focus, &:hover {
-      color: #eb5055;
+      color: #eb5055 !important;
       outline: 0
     }
   }

@@ -25,6 +25,7 @@
     position: fixed;
     width: 100%;
     line-height: 70px;
+    background: #ffffff;
     box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
     .app-header {
       font-size: 22px;

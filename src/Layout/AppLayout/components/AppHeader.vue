@@ -1,6 +1,6 @@
 <template>
-  <header>
-    <div class="app-header clearfix" :class="headerClass">
+  <header :class="headerClass">
+    <div class="app-header clearfix">
       <span class="site-title">LeonLei的博客</span>
       <div class="navbar-menu">
         <router-link to="/archive">归档</router-link>
@@ -16,29 +16,33 @@
     name: "AppHeader",
     data() {
       return {
-        offsetTop: 0,
-        headerClass: ''
+        headerClass: '',
+        lastScrollPoint: 0,
       }
     },
     methods: {
-      // 滚动监听  滚动触发的效果写在这里
       handleScroll() {
+        const animatedOffset = 65;
+        //Safari、Firefox、Chrome获取当前页面滚动高度方法
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-        let scroll = scrollTop - this.offsetTop;
-        this.offsetTop = scrollTop;
-        if (scroll < 0) {
-          this.headerClass = ' animated headroom--not-bottom slideDown headroom--top';
-        } else {
-          this.headerClass = ' animated headroom--not-bottom headroom--not-top slideUp';
+        //scrollDiff  <0向下滚动 >0向上滚动
+        let scrollDirection = scrollTop - this.lastScrollPoint;
+        this.lastScrollPoint = scrollTop;
+        if (scrollDirection > 0 && scrollTop > animatedOffset) {
+          this.headerClass = 'header-slideUp';
+        }
+        if (scrollDirection < 0 && scrollTop < animatedOffset) {
+          this.headerClass = 'header-slideDown';
         }
       }
     },
     mounted() {
-      // 设置bar浮动阈值为 #fixedBar 至页面顶部的距离
-      this.offsetTop = document.querySelector('#header').offsetHeight;
       // 开启滚动监听
       window.addEventListener('scroll', this.handleScroll);
     },
+    destroyed() {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
   }
 </script>
 
@@ -49,6 +53,7 @@
     display: block;
     position: fixed;
     width: 100%;
+    height: 70px;
     line-height: 70px;
     background: #ffffff;
     box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
@@ -60,13 +65,6 @@
       max-width: 100%;
       height: 70px;
       margin: 0 auto;
-
-      .animated {
-        -webkit-animation-duration: .5s;
-        animation-duration: .5s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both
-      }
 
       .site-title {
         float: left;
@@ -92,6 +90,62 @@
         }
       }
     }
+  }
+
+  @-webkit-keyframes slideDown {
+    0% {
+      -webkit-transform: translateY(-70px)
+    }
+    100% {
+      -webkit-transform: translateY(0)
+    }
+  }
+
+  @keyframes slideDown {
+    0% {
+      -webkit-transform: translateY(-70px);
+      transform: translateY(-70px)
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0)
+    }
+  }
+
+  @-webkit-keyframes slideUp {
+    0% {
+      -webkit-transform: translateY(0)
+    }
+    100% {
+      -webkit-transform: translateY(-70px)
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0)
+    }
+    100% {
+      -webkit-transform: translateY(-70px);
+      transform: translateY(-70px)
+    }
+  }
+
+  header.header-slideUp {
+    animation: slideUp;
+    animation-duration: .35s;
+    -webkit-animation: slideUp .35s;
+    -webkit-transform: translateY(-70px);
+    transform: translateY(-70px)
+  }
+
+  header.header-slideDown {
+    animation: slideDown;
+    animation-duration: .35s;
+    -webkit-animation: slideDown .35s;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
   }
 
 

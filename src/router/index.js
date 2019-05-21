@@ -13,5 +13,13 @@ const constantRouterMap = [
 
 export default new Router({
   mode: 'history', // 需要后台支持
-  routes: constantRouterMap
+  routes: constantRouterMap,
+  scrollBehavior (to, from, savePosition) {
+    console.log(to);
+    if (savePosition) {
+      return savePosition;
+    } else {
+      return {x: 0, y: 0};
+    }
+  }
 })

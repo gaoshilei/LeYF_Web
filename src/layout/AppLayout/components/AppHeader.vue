@@ -49,7 +49,7 @@
 <style lang="scss" scoped>
 
   header {
-    z-index: 999;
+    z-index: 99999;
     display: block;
     position: fixed;
     width: 100%;

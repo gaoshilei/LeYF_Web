@@ -4,7 +4,7 @@
       <div class="post-item" v-for="(item, index) in postList" :key="index">
         <div class="post-item-wrapper">
           <div class="item-thumb" :style="'background-image: url('+ item.cover +')'"></div>
-          <router-link :to="'/article/'+index">
+          <router-link :to="'/article?id='+index">
             <div class="item-desc">
               <p>{{item.desc}}</p>
             </div>
@@ -13,11 +13,11 @@
           <div class="item-incline block-white"></div>
           <div class="item-text">
             <div class="text-title">
-              <router-link :to="'/article/'+index">{{item.title}}</router-link>
+              <router-link :to="'/article?id='+index">{{item.title}}</router-link>
             </div>
             <div class="item-meta">
               <div class="meta-cat">
-                <router-link :to="'/category/'+index">{{'技术笔记'}}</router-link>
+                <router-link :to="'/category?id='+index">{{'技术笔记'}}</router-link>
               </div>
               <div class="meta-ico" :class="{'meta-ico-note': true}"></div>
             </div>

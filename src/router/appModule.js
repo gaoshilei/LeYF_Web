@@ -13,5 +13,17 @@ export default [
       }
     ]
   },
+  {
+    path: '/article',
+    component: AppLayout,
+    name: 'article',
+    children: [
+      {
+        path: '/',
+        component: () => import('@/app/article/article'),
+        name: 'index',
+      }
+    ]
+  },
 ]
 

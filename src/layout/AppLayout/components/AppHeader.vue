@@ -1,7 +1,9 @@
 <template>
   <header :class="headerClass">
     <div class="app-header clearfix">
-      <span class="site-title">LeonLei的博客</span>
+      <router-link to="/">
+        <span class="site-title">LeonLei的博客</span>
+      </router-link>
       <div class="navbar-menu">
         <router-link to="/archive">归档</router-link>
         <router-link to="/category">分类</router-link>
@@ -68,6 +70,7 @@
 
       .site-title {
         float: left;
+        cursor: pointer;
       }
 
       .navbar-menu {
@@ -84,7 +87,7 @@
           outline: 0
         }
 
-        a:active, a:focus, a:hover {
+        a:focus, a:hover {
           color: #eb5055;
           outline: 0
         }

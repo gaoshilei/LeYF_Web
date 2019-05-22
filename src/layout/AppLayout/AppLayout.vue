@@ -23,8 +23,8 @@
     word-break: break-all;
     text-decoration: none;
     text-overflow: ellipsis;
-    &:active, &:focus, &:hover {
-      color: #eb5055 !important;
+    &:hover {
+      color: #eb5055;
       outline: 0
     }
   }

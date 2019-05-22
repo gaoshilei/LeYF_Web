@@ -9,7 +9,7 @@
               <span class="icon">
                 <i class="iconfont icon-rili"></i>
               </span>
-              <span class="time">发表于 2017-11-07</span>
+              <span class="time">发表于 2017-11-07 00:00:00</span>
             </span>
             <span class="category">
               <span class="divider">|</span>
@@ -94,12 +94,34 @@
             }
 
             .tags {
-              span {
-
+              margin-top: 8px;
+              a {
+                display: inline-block;
+                color: #ffffff;
+                border-radius: 15px;
+                font-size: 13px;
+                font-weight: 600;
+                margin: 0 8px 0 0;
+                padding: 0 15px;
+                &:before {
+                  content: "#";
+                  margin-right: 3px;
+                }
               }
-
-              &:nth-child(1) {
-
+              a:nth-child(1) {
+                background: #2aa198;
+              }
+              a:nth-child(2) {
+                background: #42b983;
+              }
+              a:nth-child(3) {
+                background: #ff9800;
+              }
+              a:nth-child(4) {
+                background: #46c47c;
+              }
+              a:nth-child(5) {
+                background: #268bd2;
               }
             }
           }

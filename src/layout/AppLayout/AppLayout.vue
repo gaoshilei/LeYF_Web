@@ -11,7 +11,8 @@
 
   export default {
     name: "AppLayout",
-    components: {AppHeader, AppMain, AppFooter}
+    components: {AppHeader, AppMain, AppFooter},
+    methods: {}
   }
 </script>
 

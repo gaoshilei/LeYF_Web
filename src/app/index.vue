@@ -109,17 +109,7 @@
         ]
       }
     },
-    methods: {
-      scrollBackToTop() {
-        window.scrollTo(0,0);
-      }
-    },
-    mounted() {
-      window.addEventListener("beforeunload", this.scrollBackToTop);
-    },
-    destroyed() {
-      window.removeEventListener("beforeunload", this.scrollBackToTop);
-    }
+    methods: {}
   }
 </script>
 

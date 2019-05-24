@@ -22,6 +22,9 @@
   }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  .app-main {
+    padding: 120px 0 0;
+    margin: 0 auto;
+  }
 </style>

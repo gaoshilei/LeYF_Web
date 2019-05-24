@@ -23,5 +23,16 @@ export default [
       }
     ]
   },
+  {
+    path: '/category',
+    component: AppLayout,
+    children: [
+      {
+        path: '/',
+        component: () => import('@/app/category/category'),
+        name: 'category',
+      }
+    ]
+  },
 ]
 

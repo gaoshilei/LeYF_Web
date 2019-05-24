@@ -1,7 +1,7 @@
 <template>
-    <div class="app-main">
+    <main class="app-main">
       <router-view></router-view>
-    </div>
+    </main>
 </template>
 
 <script>
@@ -24,7 +24,9 @@
 
 <style lang="scss" scoped>
   .app-main {
-    padding: 120px 0 0;
+    position: relative;
+    padding: 120px 0 150px;
     margin: 0 auto;
+    min-height: 100%;
   }
 </style>

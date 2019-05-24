@@ -1,5 +1,5 @@
 <template>
-  <div id="main">
+  <div id="main" class="main">
     <router-view></router-view>
   </div>
 </template>
@@ -12,4 +12,7 @@
 
 <style lang="scss">
   @import "style.scss";
+  .main {
+    min-height: 100%;
+  }
 </style>

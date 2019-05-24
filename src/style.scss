@@ -24,16 +24,20 @@
 }
 
 html {
+  height: 100%;
   overflow-x: hidden;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100%;
   font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
   font-size: 14px;
   line-height: 1.8;
-  margin: 0 auto;
   color: #313131;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;

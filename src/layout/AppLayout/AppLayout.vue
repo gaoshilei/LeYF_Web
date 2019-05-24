@@ -17,16 +17,19 @@
 </script>
 
 <style lang="scss">
+  .app-wrapper {
+    min-height: 100%;
+    a {
+      color: #313131;
+      outline: 0;
+      word-break: break-all;
+      text-decoration: none;
+      text-overflow: ellipsis;
 
-  a {
-    color: #313131;
-    outline: 0;
-    word-break: break-all;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    &:hover {
-      color: #eb5055;
-      outline: 0
+      &:hover {
+        color: #eb5055;
+        outline: 0
+      }
     }
   }
 

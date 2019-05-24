@@ -117,7 +117,7 @@
 
   .main-content {
     position: relative;
-    padding: 120px 20px 0;
+    padding: 0 20px;
     margin: 0 auto;
     max-width: 940px;
     -webkit-animation: fade-in .5s;

@@ -1,6 +1,6 @@
 <template>
-  <div class="app-footer">
-    <div class="content-wrapper">
+  <footer class="app-footer">
+    <div class="footer-inner">
       <div class="site-info">
         <span class="copyright">@2016-2019</span>
         <span class="divider">|</span>
@@ -14,7 +14,7 @@
         <span id="busuanzi_container_site_uv">你是本站第<span id="busuanzi_value_site_uv"></span>位访客</span>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
@@ -25,13 +25,21 @@
 
 <style lang="scss" scoped>
   .app-footer {
+    display: block;
+    position: absolute;
+    width: 100%;
+    min-height: 50px;
+    left: 0;
+    bottom: 0;
     font-size: 20px;
     color: #2c3e50;
 
-    .content-wrapper {
-      margin: 20px auto;
-      max-width: 780px;
+
+    .footer-inner {
+      box-sizing: border-box;
       text-align: center;
+      margin: 20px auto;
+      width: 1000px;
 
       .divider {
         margin: 0 0.5rem;

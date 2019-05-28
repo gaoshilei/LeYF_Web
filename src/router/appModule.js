@@ -6,7 +6,7 @@ export default [
     component: AppLayout,
     children: [
       {
-        path: '/',
+        path: '',
         component: () => import('@/app/index'),
         name: 'home',
       }
@@ -17,7 +17,7 @@ export default [
     component: AppLayout,
     children: [
       {
-        path: '/',
+        path: '',
         component: () => import('@/app/article/article'),
         name: 'article',
       }
@@ -28,9 +28,14 @@ export default [
     component: AppLayout,
     children: [
       {
-        path: '/',
+        path: '',
         component: () => import('@/app/category/category'),
         name: 'category',
+      },
+      {
+        path: 'detail',
+        component: () => import('@/app/category/categoryDetail'),
+        name: 'categoryDetail',
       }
     ]
   },

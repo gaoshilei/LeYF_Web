@@ -1,10 +1,12 @@
 <template>
   <div class="post-mini-card">
     <div class="card-item">
-      <div class="content-wrapper">
-        <span class="post-title">VPS+SSR+锐速（BBR魔改版）实现超级加速</span>
-        <span class="publish-date">Jan 20, 2019</span>
-      </div>
+      <router-link :to="'/article?id=' + 99">
+        <div class="content-wrapper">
+          <span class="post-title">VPS+SSR+锐速（BBR魔改版）实现超级加速</span>
+          <span class="publish-date">Jan 20, 2019</span>
+        </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -39,7 +41,6 @@
         height: 95px;
         padding: 25px 15px 15px;
         border-radius: 2px;
-        cursor: pointer;
         -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .05);
         box-shadow: 2px 2px 4px rgba(0, 0, 0, .05);
         -webkit-transition: -webkit-transform .35s ease, filter .35s ease;

@@ -1,9 +1,12 @@
 <template>
   <div class="post-category-detail">
     <div class="category-container">
-      <span class="title">{{`技术文档`}}</span>
+      <div class="title">
+        <span>{{`技术文档`}}</span>
+        <span>分类</span>
+      </div>
       <div class="content clearfix">
-        <div style="display: inline-block" v-for="(title,index) in categoryList">
+        <div v-for="(title,index) in categoryList">
           <post-mini-card></post-mini-card>
         </div>
       </div>
@@ -33,12 +36,18 @@
 
     .category-container {
       .title {
-        font-size: 15px;
+        font-size: 20px;
+        font-weight: bold;
         color: #5f5f5f;
+
+        span:nth-child(2) {
+          font-size: 16px;
+          color: #bbbbbb;
+        }
 
         &:before {
           content: "#";
-          font-size: 16px;
+          font-size: 15px;
           color: #eb5055;
           margin-right: 8px;
         }

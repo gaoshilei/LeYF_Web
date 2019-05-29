@@ -3,9 +3,9 @@
     <div class="tag-title">标签</div>
     <div class="tag-cloud-title">{{`目前共计 ${tagsList.length} 个标签`}}</div>
     <div class="tag-main clearfix">
-      <div class="tag-item" v-for="(item, index) in tagsList">
-        <router-link :class="classObject(item)" :to="'/tag/'+item">{{item}}</router-link>
-      </div>
+      <router-link class="tag-item" v-for="(item, index) in tagsList" :key="index" :class="classObject(item)" :to="'/tag/'+item">
+        {{item}}
+      </router-link>
     </div>
   </div>
 </template>
@@ -15,7 +15,7 @@
     name: "tag",
     data() {
       return {
-        tagsList: ['AFNetworking', 'Vue', 'React', 'Angular', 'iOS', 'VPN', 'Shadowsocks', 'AFNetworking', 'Vue', 'React', 'Angular', 'iOS', 'OC', 'Java', 'NSTimer', 'VPN', 'Shadowsocks'],
+        tagsList: ['AFNetworking', 'Vue', 'React', 'Angular', 'iOS', 'VPN', 'iOS','Shadowsocks', 'Mybatis','AFNetworking', 'Vue', 'React', 'Angular', 'iOS', 'OC', 'Java', 'NSTimer', 'VPN', 'Shadowsocks'],
       }
     },
     methods: {
@@ -60,7 +60,7 @@
       .tag-item {
         display: inline-block;
         vertical-align: middle;
-        margin: 24px 10px;
+        margin: 24px 12px;
         padding: 0 5px;
         border-bottom: 1px solid #999;
         -webkit-transition: -webkit-transform .3s ease, filter .3s ease;
@@ -72,26 +72,22 @@
           -webkit-transform: scale(1.15);
           -moz-transform: scale(1.15);
           border-bottom: 1px solid #eb5055;
-        }
-
-        a:hover {
           color: #eb5055;
         }
+      }
+      .small-size {
+        font-size: 16px;
+        color: #ccc;
+      }
 
-        .small-size {
-          font-size: 16px;
-          color: #ccc;
-        }
+      .middle-size {
+        font-size: 21px;
+        color: #6f6f6f;
+      }
 
-        .middle-size {
-          font-size: 21px;
-          color: #6f6f6f;
-        }
-
-        .large-size {
-          font-size: 30px;
-          color: #111;
-        }
+      .large-size {
+        font-size: 30px;
+        color: #111;
       }
     }
   }

@@ -24,6 +24,17 @@ export default [
     ]
   },
   {
+    path: '/archive',
+    component: AppLayout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/app/archive/archive'),
+        name: 'archive',
+      }
+    ]
+  },
+  {
     path: '/category',
     component: AppLayout,
     children: [
@@ -33,9 +44,25 @@ export default [
         name: 'category',
       },
       {
-        path: 'detail',
+        path: ':name',
         component: () => import('@/app/category/categoryDetail'),
         name: 'categoryDetail',
+      }
+    ]
+  },
+  {
+    path: '/tag',
+    component: AppLayout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/app/tag/tag'),
+        name: 'tag',
+      },
+      {
+        path: ':name',
+        component: () => import('@/app/tag/tagDetail'),
+        name: 'tagDetail',
       }
     ]
   },

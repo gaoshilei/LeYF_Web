@@ -7,6 +7,7 @@
       <div class="navbar-menu">
         <router-link to="/archive">归档</router-link>
         <router-link to="/category">分类</router-link>
+        <router-link to="/tag">标签</router-link>
         <router-link to="/about">关于</router-link>
       </div>
     </div>

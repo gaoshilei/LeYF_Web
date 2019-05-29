@@ -1,7 +1,7 @@
 <template>
   <div class="post-category-card">
     <div class="category-item-wrapper">
-      <router-link :to="'/category/detail?id=' + Math.random().toFixed(1)*10">
+      <router-link :to="'/category/' + Math.random().toFixed(1)*10">
         <div class="category-item" :style="randomColorClass()">
           <span class="cat-item-title">{{title}}</span>
           <div class="corner-cover"></div>

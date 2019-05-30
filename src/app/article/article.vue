@@ -20,7 +20,7 @@
               <router-link :to="'/category?='+'jishu'">技术文档</router-link>
             </span>
             <div class="tags">
-              <router-link :to="'/tags/'+ item" v-for="(item,index) in tags" :key="index">{{item}}</router-link>
+              <router-link :to="'/tag/'+ item" v-for="(item,index) in tags" :key="index">{{item}}</router-link>
             </div>
           </div>
         </div>

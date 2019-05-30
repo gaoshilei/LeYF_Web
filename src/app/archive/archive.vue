@@ -47,7 +47,7 @@
         left: -2px;
         width: 4px;
         height: 100%;
-        background: #f5f5f5;
+        background: #f1f1f1;
         z-index: -1;
       }
 

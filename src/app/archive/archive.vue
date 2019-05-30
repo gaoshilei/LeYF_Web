@@ -64,7 +64,7 @@
       .post-counter {
         font-size: 14px;
         color: #555555;
-        margin: 0 0 32px 32px;
+        margin: 0 0 32px 24px;
       }
 
       .archive-year {
@@ -73,7 +73,7 @@
           font-size: 20px;
           line-height: 32px;
           font-weight: bold;
-          padding: 30px 32px;
+          padding: 30px 24px;
 
           &:before {
             content: '';
@@ -95,10 +95,6 @@
           background: #ffffff;
           -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
           box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
-          &:hover {
-            -webkit-box-shadow: 0 0 14px rgba(202,203,203,0.75);
-            -moz-box-shadow: 0 0 14px rgba(202,203,204,0.75);
-          }
           .post-header {
             position: relative;
             display: flex;
@@ -106,6 +102,15 @@
             padding: 20px 0 15px 16px;
             border-bottom: 1px dashed #ccc;
             cursor: pointer;
+            &:hover {
+              div {
+                color: #eb5055;
+              }
+              &::before {
+                background: #eb5055;
+              }
+              border-bottom: 1px dashed #eb5055;
+            }
             &:before {
               content: '';
               position: absolute;
@@ -130,7 +135,6 @@
               margin-left: 12px;
             }
           }
-
         }
       }
     }

@@ -66,5 +66,16 @@ export default [
       }
     ]
   },
+  {
+    path: '/about',
+    component: AppLayout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/app/about/about'),
+        name: 'about',
+      },
+    ]
+  },
 ]
 

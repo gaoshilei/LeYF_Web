@@ -88,7 +88,7 @@
           outline: 0
         }
 
-        a:focus, a:hover {
+        a:hover {
           color: #eb5055;
           outline: 0
         }

@@ -1,47 +1,16 @@
 <template>
-  <div class="article-container">
-    <div class="content-wrapper">
-      <article class="post" itemscope itemtype="http://schema.org/Article">
-        <div class="post-header">
-          <span class="post-title">VPS+SSR+锐速（BBR魔改版）实现超级加速</span>
-          <div class="post-meta">
-            <span class="publish">
-              <span class="icon">
-                <i class="iconfont icon-rili"></i>
-              </span>
-              <span class="time">发表于 2017-11-07 00:00:00</span>
-            </span>
-            <span class="category">
-              <span class="divider">|</span>
-              <span class="icon">
-                <i class="iconfont icon-fenlei"></i>
-              </span>
-              <span>分类于</span>
-              <router-link :to="'/category?='+'jishu'">技术文档</router-link>
-            </span>
-            <div class="tags">
-              <router-link :to="'/tag/'+ item" v-for="(item,index) in tags" :key="index">{{item}}</router-link>
-            </div>
-          </div>
-        </div>
-        <div class="post-body">
-          <div v-html="value"></div>
-        </div>
-      </article>
+  <div class="about">
+    <div class="post-body">
+      <div v-html="value"></div>
     </div>
-    <sidebar></sidebar>
   </div>
 </template>
 
 <script>
-  import sidebar from './components/sidebar';
-
   export default {
-    name: "articleComponent",
+    name: "about",
     data() {
       return {
-        editType: "preview",
-        tags: ['Vue', 'SSR', 'Java'],
         value: "<p>谷歌2016年出了一个基于Linux内核的 BBR 拥塞控制算法，虽然咱不懂咋回事，还是大概知道它也是通过优化 TCP 底层协议来实现网速加速，跟锐速的原理一样。我是通过搬瓦工的 KiwiVM 后台安装的，用了之后感觉不咋地，网上查了一下，大部分网友都说锐速的加速效果要好于BBR。锐速已经停止新用户注册和维护了，之前虽然收费，但是现在已经有破解版。BBR不好用，有大神就开始魔改了，出了一个魔改版的BBR，据说效果比锐速还好！<br/>下文对于锐速和BBR魔改版安装都有介绍，你可以尝试一下，看哪个速度更快。<br/>下文的环境基于：CentOS6 X64</p>\n" +
           "\n" +
           "<h1>1、准备 VPS</h1>\n" +
@@ -483,89 +452,16 @@
           "\n" +
           "<p>是不是感觉帮帮哒！</p>"
       }
-    },
-    components: {sidebar},
-    methods: {},
-    mounted() {
-      console.log(this.$route.query);
     }
   }
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
   @import "../style/markdown.scss";
 
-  .article-container {
+  .about {
     margin: 0 auto;
     max-width: 800px;
-
-    .content-wrapper {
-      .post {
-        .post-header {
-          margin: 28px 0 60px;
-
-          .post-title {
-            text-align: center;
-            word-break: break-word;
-            font-size: 20px;
-            font-weight: 400;
-          }
-
-          .post-meta {
-            color: #999;
-            font-size: 12px;
-
-            .icon {
-              margin-right: 3px;
-            }
-
-            .category {
-              .divider {
-                margin: 0 0.5rem;
-              }
-
-              a {
-                color: #555555;
-                border-bottom: 1px solid #999999;
-              }
-            }
-
-            .tags {
-              margin-top: 8px;
-              a {
-                display: inline-block;
-                color: #ffffff;
-                border-radius: 15px;
-                font-size: 13px;
-                font-weight: 600;
-                margin: 0 8px 0 0;
-                padding: 0 15px;
-                &:before {
-                  content: "#";
-                  margin-right: 3px;
-                }
-              }
-              a:nth-child(1) {
-                background: #2aa198;
-              }
-              a:nth-child(2) {
-                background: #42b983;
-              }
-              a:nth-child(3) {
-                background: #ff9800;
-              }
-              a:nth-child(4) {
-                background: #46c47c;
-              }
-              a:nth-child(5) {
-                background: #268bd2;
-              }
-            }
-          }
-        }
-      }
-    }
   }
 
 </style>

@@ -6,6 +6,8 @@ import router from './router';
 import Cookies from 'js-cookie';
 import Element from 'element-ui';
 import {mockXHR} from '@/mock';
+import * as filters from './filters' // global filters
+
 
 Vue.config.productionTip = false;
 

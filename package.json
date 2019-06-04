@@ -78,7 +78,7 @@
     "plop": "2.3.0",
     "portfinder": "^1.0.13",
     "postcss-import": "^11.0.0",
-    "postcss-loader": "^2.0.8",
+    "postcss-loader": "^2.1.6",
     "postcss-url": "^7.2.1",
     "rimraf": "^2.6.0",
     "runjs": "^4.3.2",

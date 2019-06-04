@@ -22,7 +22,7 @@
   import {mapState} from 'vuex';
 
   export default {
-    name: 'Layout',
+    name: 'AdminLayout',
     components: {
       AppMain,
       Navbar,

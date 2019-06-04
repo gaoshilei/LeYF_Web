@@ -10,6 +10,10 @@
   }
 </script>
 
+<style lang="css">
+  @import url("./iconfont/iconfont.css");
+</style>
+
 <style lang="scss">
   @import '@/styles/index.scss'; // global css
 

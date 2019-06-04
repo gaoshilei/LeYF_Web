@@ -1,4 +1,4 @@
-import AppLayout from '@/Layout/AppLayout/AppLayout'
+import AppLayout from '@/Layout/AppLayout'
 
 export default [
   {

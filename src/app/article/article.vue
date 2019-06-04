@@ -494,7 +494,7 @@
 
 <style lang="scss">
 
-  @import "../style/markdown.scss";
+  @import "@/styles/markdown";
 
   .article-container {
     margin: 0 auto;

@@ -1,4 +1,4 @@
-import AdminLayout from '@/Layout/AdminLayout/AdminLayout'
+import AdminLayout from '@/layout/AdminLayout'
 
 export default [
 

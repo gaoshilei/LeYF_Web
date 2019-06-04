@@ -457,7 +457,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../style/markdown.scss";
+  @import "../../styles/markdown";
 
   .about {
     margin: 0 auto;

@@ -6,7 +6,6 @@ import router from './router';
 import Cookies from 'js-cookie';
 import Element from 'element-ui';
 import {mockXHR} from '@/mock';
-import '@/styles/index.scss'; // global css
 
 Vue.config.productionTip = false;
 

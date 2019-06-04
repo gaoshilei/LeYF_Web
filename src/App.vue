@@ -11,7 +11,7 @@
 </script>
 
 <style lang="scss">
-  @import "style.scss";
+  import '@/styles/index.scss'; // global css
   .main {
     min-height: 100%;
   }

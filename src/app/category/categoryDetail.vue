@@ -2,12 +2,12 @@
   <div class="post-category-detail">
     <div class="category-container">
       <div class="title">
-        <span>{{`技术文档`}}</span>
+        <span>{{ `技术文档` }}</span>
         <span>分类</span>
       </div>
       <div class="content clearfix">
-        <div v-for="(title,index) in categoryList">
-          <post-mini-card></post-mini-card>
+        <div v-for="(title,index) in categoryList" :key="index">
+          <post-mini-card />
         </div>
       </div>
     </div>
@@ -15,18 +15,18 @@
 </template>
 
 <script>
-  import postMiniCard from '../components/postMiniCard';
+import postMiniCard from '../components/postMiniCard'
 
-  export default {
-    name: "category",
-    data() {
-      return {
-        categoryList: ['技术文档', '教程', '看电影', '杂谈', 'IT圈', '源码解析', '他山之石', '实用工具', '跳坑指南'],
-      }
-    },
-    components: {postMiniCard},
-    methods: {},
-  }
+export default {
+  name: 'Category',
+  components: { postMiniCard },
+  data() {
+    return {
+      categoryList: ['技术文档', '教程', '看电影', '杂谈', 'IT圈', '源码解析', '他山之石', '实用工具', '跳坑指南']
+    }
+  },
+  methods: {}
+}
 </script>
 
 <style lang="scss">

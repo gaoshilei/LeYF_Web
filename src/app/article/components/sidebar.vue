@@ -1,11 +1,13 @@
 <template>
 
+  <div class="sideBar" />
+
 </template>
 
 <script>
-  export default {
-    name: "articleSidebar"
-  }
+export default {
+  name: 'ArticleSidebar'
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,14 +1,14 @@
 <template>
   <div class="post-archive">
     <div class="archive-timeline">
-      <span class="timeline-begin-dot"></span>
+      <span class="timeline-begin-dot" />
       <div class="post-counter">目前一共18篇文章</div>
-      <div class="archive-year" v-for="(item, index) in postList" :key="index">
-        <div class="year-title">{{item.year}}</div>
-        <div class="post-item" v-for="(postItem, postIndex) in item.posts" :key="postIndex">
+      <div v-for="(item, index) in postList" :key="index" class="archive-year">
+        <div class="year-title">{{ item.year }}</div>
+        <div v-for="(postItem, postIndex) in item.posts" :key="postIndex" class="post-item">
           <div class="post-header">
-            <div class="post-date">{{`01-09`}}</div>
-            <div class="post-title">{{postItem}}</div>
+            <div class="post-date">{{ `01-09` }}</div>
+            <div class="post-title">{{ postItem }}</div>
           </div>
         </div>
       </div>
@@ -17,18 +17,18 @@
 </template>
 
 <script>
-  export default {
-    name: "archiveComponent",
-    data() {
-      return {
-        postList: [
-          {year: 2019, posts: ['VPS+SSR+锐速（BBR魔改版）实现超级加速', 'VPS+SSR+锐速（BBR魔改版）实现超级加速', 'VPS+SSR+锐速（BBR魔改版）实现超级加速']},
-          {year: 2018, posts: ['VPS+SSR+锐速（BBR魔改版）实现超级加速', 'VPS+SSR+锐速（BBR魔改版）实现超级加速', 'VPS+SSR+锐速（BBR魔改版）实现超级加速']},
-          {year: 2017, posts: ['VPS+SSR+锐速（BBR魔改版）实现超级加速', 'VPS+SSR+锐速（BBR魔改版）实现超级加速', 'VPS+SSR+锐速（BBR魔改版）实现超级加速']},
-        ]
-      }
+export default {
+  name: 'ArchiveComponent',
+  data() {
+    return {
+      postList: [
+        { year: 2019, posts: ['VPS+SSR+锐速（BBR魔改版）实现超级加速', 'VPS+SSR+锐速（BBR魔改版）实现超级加速', 'VPS+SSR+锐速（BBR魔改版）实现超级加速'] },
+        { year: 2018, posts: ['VPS+SSR+锐速（BBR魔改版）实现超级加速', 'VPS+SSR+锐速（BBR魔改版）实现超级加速', 'VPS+SSR+锐速（BBR魔改版）实现超级加速'] },
+        { year: 2017, posts: ['VPS+SSR+锐速（BBR魔改版）实现超级加速', 'VPS+SSR+锐速（BBR魔改版）实现超级加速', 'VPS+SSR+锐速（BBR魔改版）实现超级加速'] }
+      ]
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>

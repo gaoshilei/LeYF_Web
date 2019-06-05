@@ -1,6 +1,6 @@
 /** When your routing table is too long, you can split it into small modules **/
 
-import Layout from '@/layout/AdminLayout';
+import Layout from '@/layout/Admin'
 
 const componentsRouter = {
   path: '/components',
@@ -16,87 +16,87 @@ const componentsRouter = {
       path: 'tinymce',
       component: () => import('@/admin/views/components-demo/tinymce'),
       name: 'TinymceDemo',
-      meta: {title: 'Tinymce'}
+      meta: { title: 'Tinymce' }
     },
     {
       path: 'markdown',
       component: () => import('@/admin/views/components-demo/markdown'),
       name: 'MarkdownDemo',
-      meta: {title: 'Markdown'}
+      meta: { title: 'Markdown' }
     },
     {
       path: 'json-editor',
       component: () => import('@/admin/views/components-demo/json-editor'),
       name: 'JsonEditorDemo',
-      meta: {title: 'JSON Editor'}
+      meta: { title: 'JSON Editor' }
     },
     {
       path: 'split-pane',
       component: () => import('@/admin/views/components-demo/split-pane'),
       name: 'SplitpaneDemo',
-      meta: {title: 'SplitPane'}
+      meta: { title: 'SplitPane' }
     },
     {
       path: 'avatar-upload',
       component: () => import('@/admin/views/components-demo/avatar-upload'),
       name: 'AvatarUploadDemo',
-      meta: {title: 'Upload'}
+      meta: { title: 'Upload' }
     },
     {
       path: 'dropzone',
       component: () => import('@/admin/views/components-demo/dropzone'),
       name: 'DropzoneDemo',
-      meta: {title: 'Dropzone'}
+      meta: { title: 'Dropzone' }
     },
     {
       path: 'sticky',
       component: () => import('@/admin/views/components-demo/sticky'),
       name: 'StickyDemo',
-      meta: {title: 'Sticky'}
+      meta: { title: 'Sticky' }
     },
     {
       path: 'count-to',
       component: () => import('@/admin/views/components-demo/count-to'),
       name: 'CountToDemo',
-      meta: {title: 'Count To'}
+      meta: { title: 'Count To' }
     },
     {
       path: 'mixin',
       component: () => import('@/admin/views/components-demo/mixin'),
       name: 'ComponentMixinDemo',
-      meta: {title: 'Component Mixin'}
+      meta: { title: 'Component Mixin' }
     },
     {
       path: 'back-to-top',
       component: () => import('@/admin/views/components-demo/back-to-top'),
       name: 'BackToTopDemo',
-      meta: {title: 'Back To Top'}
+      meta: { title: 'Back To Top' }
     },
     {
       path: 'drag-dialog',
       component: () => import('@/admin/views/components-demo/drag-dialog'),
       name: 'DragDialogDemo',
-      meta: {title: 'Drag Dialog'}
+      meta: { title: 'Drag Dialog' }
     },
     {
       path: 'drag-select',
       component: () => import('@/admin/views/components-demo/drag-select'),
       name: 'DragSelectDemo',
-      meta: {title: 'Drag Select'}
+      meta: { title: 'Drag Select' }
     },
     {
       path: 'dnd-list',
       component: () => import('@/admin/views/components-demo/dnd-list'),
       name: 'DndListDemo',
-      meta: {title: 'Dnd List'}
+      meta: { title: 'Dnd List' }
     },
     {
       path: 'drag-kanban',
       component: () => import('@/admin/views/components-demo/drag-kanban'),
       name: 'DragKanbanDemo',
-      meta: {title: 'Drag Kanban'}
+      meta: { title: 'Drag Kanban' }
     }
   ]
-};
+}
 
-export default componentsRouter;
+export default componentsRouter

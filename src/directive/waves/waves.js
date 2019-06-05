@@ -1,4 +1,4 @@
-// import './waves.css'
+import './waves.css'
 
 const context = '@@wavesContext'
 

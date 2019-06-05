@@ -2,23 +2,23 @@
   <div class="post-card">
     <div class="post-item">
       <div class="post-item-wrapper">
-        <div class="item-thumb" :style="'background-image: url('+ item.cover +')'"></div>
+        <div class="item-thumb" :style="'background-image: url('+ item.cover +')'" />
         <router-link :to="'/article?id='+889">
           <div class="item-desc">
-            <p>{{item.desc}}</p>
+            <p>{{ item.desc }}</p>
           </div>
         </router-link>
-        <div class="item-incline block-translucent"></div>
-        <div class="item-incline block-white"></div>
+        <div class="item-incline block-translucent" />
+        <div class="item-incline block-white" />
         <div class="item-text">
           <div class="text-title">
-            <router-link :to="'/article?id='+99">{{item.title}}</router-link>
+            <router-link :to="'/article?id='+99">{{ item.title }}</router-link>
           </div>
           <div class="item-meta">
             <div class="meta-cat">
-              <router-link :to="'/category?id='+99">{{'技术笔记'}}</router-link>
+              <router-link :to="'/category?id='+99">{{ '技术笔记' }}</router-link>
             </div>
-            <div class="meta-ico" :class="{'meta-ico-note': true}"></div>
+            <div class="meta-ico" :class="{'meta-ico-note': true}" />
           </div>
         </div>
       </div>
@@ -27,22 +27,22 @@
 </template>
 
 <script>
-  export default {
-    name: "postCard",
-    props: ["item"],
-    data() {
-      return {}
-    },
-    created() {
-    },
-    mounted() {
-      this.item =  {
-        title: 'VPS+SSR+锐速（BBR魔改版）实现超级加速',
-        desc: '谷歌2016年出了一个基于Linux内核的 BBR 拥塞控制算法，虽然咱不懂咋回事，还是大概知道它...',
-        cover: 'http://leonlei.top/1128559477749972992.jpeg'
-      };
+export default {
+  name: 'PostCard',
+  props: ['item'],
+  data() {
+    return {}
+  },
+  created() {
+  },
+  mounted() {
+    this.item = {
+      title: 'VPS+SSR+锐速（BBR魔改版）实现超级加速',
+      desc: '谷歌2016年出了一个基于Linux内核的 BBR 拥塞控制算法，虽然咱不懂咋回事，还是大概知道它...',
+      cover: 'http://leonlei.top/1128559477749972992.jpeg'
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -2,30 +2,31 @@
   <div class="main-content">
     <div class="post-list">
       <div v-for="(item, index) in postList" :key="index">
-        <post-card :item.sync="item"></post-card>
+        <post-card :item.sync="item" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import postCard from './components/postCard';
-  export default {
-    name: "index",
-    data() {
-      return {
-        cateIcoClsMap: {},
-        postList: [{},{},{}]
-      }
-    },
-    components: {postCard},
-    methods: {},
-    mounted() {
-      // setInterval(()=>{
-      //   console.log(this.postList);
-      // },1000);
+import postCard from './components/postCard'
+
+export default {
+  name: 'Index',
+  components: { postCard },
+  data() {
+    return {
+      cateIcoClsMap: {},
+      postList: [{}, {}, {}]
     }
-  }
+  },
+  mounted() {
+    // setInterval(()=>{
+    //   console.log(this.postList);
+    // },1000);
+  },
+  methods: {}
+}
 </script>
 
 <style lang="scss" scoped>

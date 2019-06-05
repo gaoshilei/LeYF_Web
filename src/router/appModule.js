@@ -1,4 +1,4 @@
-import AppLayout from '@/layout/AppLayout'
+import AppLayout from '@/layout/App'
 
 export default [
   {
@@ -8,7 +8,7 @@ export default [
       {
         path: '',
         component: () => import('@/app/index'),
-        name: 'home',
+        name: 'home'
       }
     ]
   },
@@ -19,7 +19,7 @@ export default [
       {
         path: '',
         component: () => import('@/app/article/article'),
-        name: 'article',
+        name: 'article'
       }
     ]
   },
@@ -30,7 +30,7 @@ export default [
       {
         path: '',
         component: () => import('@/app/archive/archive'),
-        name: 'archive',
+        name: 'archive'
       }
     ]
   },
@@ -41,12 +41,12 @@ export default [
       {
         path: '',
         component: () => import('@/app/category/category'),
-        name: 'category',
+        name: 'category'
       },
       {
         path: ':name',
         component: () => import('@/app/category/categoryDetail'),
-        name: 'categoryDetail',
+        name: 'categoryDetail'
       }
     ]
   },
@@ -57,12 +57,12 @@ export default [
       {
         path: '',
         component: () => import('@/app/tag/tag'),
-        name: 'tag',
+        name: 'tag'
       },
       {
         path: ':name',
         component: () => import('@/app/tag/tagDetail'),
-        name: 'tagDetail',
+        name: 'tagDetail'
       }
     ]
   },
@@ -73,9 +73,9 @@ export default [
       {
         path: '',
         component: () => import('@/app/about/about'),
-        name: 'about',
-      },
+        name: 'about'
+      }
     ]
-  },
+  }
 ]
 

@@ -12,16 +12,16 @@
 </template>
 
 <script>
-  export default {
-    name: "postMiniCard",
-    data() {
-      return {
-      }
-    },
-    methods: {
-
+export default {
+  name: 'PostMiniCard',
+  data() {
+    return {
     }
+  },
+  methods: {
+
   }
+}
 </script>
 
 <style lang="scss" scoped>

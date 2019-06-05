@@ -1,33 +1,33 @@
 <template>
   <div class="tag">
     <div class="tag-title">标签</div>
-    <div class="tag-cloud-title">{{`目前共计 ${tagsList.length} 个标签`}}</div>
+    <div class="tag-cloud-title">{{ `目前共计 ${tagsList.length} 个标签` }}</div>
     <div class="tag-main clearfix">
-      <router-link class="tag-item" v-for="(item, index) in tagsList" :key="index" :class="classObject(item)" :to="'/tag/'+item">
-        {{item}}
+      <router-link v-for="(item, index) in tagsList" :key="index" class="tag-item" :class="classObject(item)" :to="'/tag/'+item">
+        {{ item }}
       </router-link>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: "tag",
-    data() {
+export default {
+  name: 'Tag',
+  data() {
+    return {
+      tagsList: ['AFNetworking', 'Vue', 'React', 'Angular', 'iOS', 'VPN', 'iOS', 'Shadowsocks', 'Mybatis', 'AFNetworking', 'Vue', 'React', 'Angular', 'iOS', 'OC', 'Java', 'NSTimer', 'VPN', 'Shadowsocks']
+    }
+  },
+  methods: {
+    classObject(item) {
       return {
-        tagsList: ['AFNetworking', 'Vue', 'React', 'Angular', 'iOS', 'VPN', 'iOS','Shadowsocks', 'Mybatis','AFNetworking', 'Vue', 'React', 'Angular', 'iOS', 'OC', 'Java', 'NSTimer', 'VPN', 'Shadowsocks'],
-      }
-    },
-    methods: {
-      classObject(item) {
-        return {
-          'small-size': item.length > 5,
-          'middle-size': item.length > 2 && item.length < 6,
-          'large-size': item.length < 3
-        };
+        'small-size': item.length > 5,
+        'middle-size': item.length > 2 && item.length < 6,
+        'large-size': item.length < 3
       }
     }
   }
+}
 </script>
 
 <style lang="scss">

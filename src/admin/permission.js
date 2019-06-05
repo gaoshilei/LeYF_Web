@@ -19,11 +19,10 @@ router.beforeEach(async(to, from, next) => {
 
   // determine whether the user has logged in
   const hasToken = getToken()
-
   if (hasToken) {
     if (to.path === '/admin/login') {
       // if is logged in, redirect to the home page
-      next({ path: '/admin/' })
+      next({ path: '/' })
       NProgress.done()
     } else {
       // determine whether the user has obtained his permission roles through getInfo
@@ -34,10 +33,10 @@ router.beforeEach(async(to, from, next) => {
         try {
           // get user info
           // note: roles must be a object array! such as: ['admin'] or ,['developer','editor']
-          const { roles } = await store.dispatch('/admin/user/getInfo')
+          const { roles } = await store.dispatch('/user/getInfo')
 
           // generate accessible routes map based on roles
-          const accessRoutes = await store.dispatch('/admin/permission/generateRoutes', roles)
+          const accessRoutes = await store.dispatch('/permission/generateRoutes', roles)
 
           // dynamically add accessible routes
           router.addRoutes(accessRoutes)
@@ -47,7 +46,7 @@ router.beforeEach(async(to, from, next) => {
           next({ ...to, replace: true })
         } catch (error) {
           // remove token and go to login page to re-login
-          await store.dispatch('/admin/user/resetToken')
+          await store.dispatch('/user/resetToken')
           Message.error(error || 'Has Error')
           next(`/admin/login?redirect=${to.path}`)
           NProgress.done()

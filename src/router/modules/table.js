@@ -3,9 +3,9 @@
 import Layout from '@/layout/Admin'
 
 const tableRouter = {
-  path: '/table',
+  path: '/admin/table',
   component: Layout,
-  redirect: '/table/complex-table',
+  redirect: '/admin/table/complex-table',
   name: 'Table',
   meta: {
     title: 'Table',

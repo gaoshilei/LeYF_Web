@@ -35,40 +35,40 @@ import nestedRouter from './modules/nested'
  */
 export const constantRoutes = [
   {
-    path: '/redirect',
+    path: '/admin/redirect',
     component: Layout,
     hidden: true,
     children: [
       {
-        path: '/redirect/:path*',
+        path: '/admin/redirect/:path*',
         component: () => import('@/admin/views/redirect/index')
       }
     ]
   },
   {
-    path: '/login',
+    path: '/admin/login',
     component: () => import('@/admin/views/login/index'),
     hidden: true
   },
   {
-    path: '/auth-redirect',
+    path: '/admin/auth-redirect',
     component: () => import('@/admin/views/login/auth-redirect'),
     hidden: true
   },
   {
-    path: '/404',
+    path: '/admin/404',
     component: () => import('@/admin/views/error-page/404'),
     hidden: true
   },
   {
-    path: '/401',
+    path: '/admin/401',
     component: () => import('@/admin/views/error-page/401'),
     hidden: true
   },
   {
-    path: '/',
+    path: '/admin',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: '/admin/dashboard',
     children: [
       {
         path: 'dashboard',
@@ -79,7 +79,7 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/documentation',
+    path: '/admin/documentation',
     component: Layout,
     children: [
       {
@@ -91,9 +91,9 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/guide',
+    path: '/admin/guide',
     component: Layout,
-    redirect: '/guide/index',
+    redirect: '/admin/guide/index',
     children: [
       {
         path: 'index',
@@ -104,9 +104,9 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/profile',
+    path: '/admin/profile',
     component: Layout,
-    redirect: '/profile/index',
+    redirect: '/admin/profile/index',
     hidden: true,
     children: [
       {
@@ -125,9 +125,9 @@ export const constantRoutes = [
  */
 export const asyncRoutes = [
   {
-    path: '/permission',
+    path: '/admin/permission',
     component: Layout,
-    redirect: '/permission/page',
+    redirect: '/admin/permission/page',
     alwaysShow: true, // will always show the root menu
     name: 'Permission',
     meta: {
@@ -167,7 +167,7 @@ export const asyncRoutes = [
   },
 
   {
-    path: '/icon',
+    path: '/admin/icon',
     component: Layout,
     children: [
       {
@@ -186,7 +186,7 @@ export const asyncRoutes = [
   tableRouter,
 
   {
-    path: '/example',
+    path: '/admin/example',
     component: Layout,
     redirect: '/example/list',
     name: 'Example',
@@ -218,7 +218,7 @@ export const asyncRoutes = [
   },
 
   {
-    path: '/tab',
+    path: '/admin/tab',
     component: Layout,
     children: [
       {
@@ -231,7 +231,7 @@ export const asyncRoutes = [
   },
 
   {
-    path: '/error',
+    path: '/admin/error',
     component: Layout,
     redirect: 'noRedirect',
     name: 'ErrorPages',
@@ -256,7 +256,7 @@ export const asyncRoutes = [
   },
 
   {
-    path: '/error-log',
+    path: '/admin/error-log',
     component: Layout,
     children: [
       {
@@ -269,7 +269,7 @@ export const asyncRoutes = [
   },
 
   {
-    path: '/excel',
+    path: '/admin/excel',
     component: Layout,
     redirect: '/excel/export-excel',
     name: 'Excel',
@@ -306,7 +306,7 @@ export const asyncRoutes = [
   },
 
   {
-    path: '/zip',
+    path: '/admin/zip',
     component: Layout,
     redirect: '/zip/download',
     alwaysShow: true,
@@ -323,9 +323,9 @@ export const asyncRoutes = [
   },
 
   {
-    path: '/pdf',
+    path: '/admin/pdf',
     component: Layout,
-    redirect: '/pdf/index',
+    redirect: '/admin/pdf/index',
     children: [
       {
         path: 'index',
@@ -336,13 +336,13 @@ export const asyncRoutes = [
     ]
   },
   {
-    path: '/pdf/download',
+    path: '/admin/pdf/download',
     component: () => import('@/admin/views/pdf/download'),
     hidden: true
   },
 
   {
-    path: '/theme',
+    path: '/admin/theme',
     component: Layout,
     children: [
       {
@@ -355,7 +355,7 @@ export const asyncRoutes = [
   },
 
   {
-    path: '/clipboard',
+    path: '/admin/clipboard',
     component: Layout,
     children: [
       {

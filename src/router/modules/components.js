@@ -3,7 +3,7 @@
 import Layout from '@/layout/Admin'
 
 const componentsRouter = {
-  path: '/components',
+  path: '/admin/components',
   component: Layout,
   redirect: 'noRedirect',
   name: 'ComponentDemo',

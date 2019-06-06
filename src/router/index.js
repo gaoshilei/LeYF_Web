@@ -4,11 +4,11 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 import appModule from './appModule'
-import adminModule from './adminModule'
+import { adminConstantRoutes } from './adminModule'
 
 const constantRouterMap = [
   ...appModule,
-  ...adminModule
+  ...adminConstantRoutes
 ]
 
 const createRouter = () => new Router({

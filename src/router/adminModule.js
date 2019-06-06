@@ -33,7 +33,7 @@ import nestedRouter from './modules/nested'
  * a base page that does not have permission requirements
  * all roles can be accessed
  */
-export const constantRoutes = [
+export const adminConstantRoutes = [
   {
     path: '/admin/redirect',
     component: Layout,
@@ -123,7 +123,7 @@ export const constantRoutes = [
  * asyncRoutes
  * the routes that need to be dynamically loaded based on user roles
  */
-export const asyncRoutes = [
+export const adminAsyncRoutes = [
   {
     path: '/admin/permission',
     component: Layout,
@@ -383,6 +383,6 @@ export const asyncRoutes = [
 ]
 
 export default [
-  ...constantRoutes,
-  ...asyncRoutes
+  ...adminConstantRoutes,
+  ...adminAsyncRoutes
 ]

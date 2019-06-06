@@ -15,7 +15,6 @@ const createRouter = () => new Router({
   mode: 'history', // 需要后台支持
   routes: constantRouterMap,
   scrollBehavior(to, from, savePosition) {
-    console.log(to)
     if (savePosition) {
       return savePosition
     } else {

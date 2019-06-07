@@ -323,25 +323,6 @@ export const adminAsyncRoutes = [
   },
 
   {
-    path: '/admin/pdf',
-    component: Layout,
-    redirect: '/admin/pdf/index',
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/admin/views/pdf/index'),
-        name: 'PDF',
-        meta: { title: 'PDF', icon: 'pdf' }
-      }
-    ]
-  },
-  {
-    path: '/admin/pdf/download',
-    component: () => import('@/admin/views/pdf/download'),
-    hidden: true
-  },
-
-  {
     path: '/admin/theme',
     component: Layout,
     children: [

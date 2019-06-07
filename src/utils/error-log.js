@@ -29,6 +29,7 @@ if (checkNeed()) {
         info,
         url: window.location.href
       })
+      console.log(`出错日志...`)
       console.error(err, info)
     })
   }

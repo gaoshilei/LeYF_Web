@@ -78,18 +78,6 @@ export const adminConstantRoutes = [
     ]
   },
   {
-    path: '/admin/documentation',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/admin/views/documentation/index'),
-        name: 'Documentation',
-        meta: { title: 'Documentation', icon: 'documentation', affix: true }
-      }
-    ]
-  },
-  {
     path: '/admin/profile',
     component: Layout,
     redirect: '/admin/profile/index',
@@ -110,60 +98,6 @@ export const adminConstantRoutes = [
  * the routes that need to be dynamically loaded based on user roles
  */
 export const adminAsyncRoutes = [
-  {
-    path: '/admin/permission',
-    component: Layout,
-    redirect: '/admin/permission/page',
-    alwaysShow: true, // will always show the root menu
-    name: 'Permission',
-    meta: {
-      title: 'Permission',
-      icon: 'lock',
-      roles: ['admin', 'editor'] // you can set roles in root nav
-    },
-    children: [
-      {
-        path: 'page',
-        component: () => import('@/admin/views/permission/page'),
-        name: 'PagePermission',
-        meta: {
-          title: 'Page Permission',
-          roles: ['admin'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'directive',
-        component: () => import('@/admin/views/permission/directive'),
-        name: 'DirectivePermission',
-        meta: {
-          title: 'Directive Permission'
-          // if do not set roles, means: this page does not require permission
-        }
-      },
-      {
-        path: 'role',
-        component: () => import('@/admin/views/permission/role'),
-        name: 'RolePermission',
-        meta: {
-          title: 'Role Permission',
-          roles: ['admin']
-        }
-      }
-    ]
-  },
-
-  {
-    path: '/admin/icon',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/admin/views/icons/index'),
-        name: 'Icons',
-        meta: { title: 'Icons', icon: 'icon', noCache: true }
-      }
-    ]
-  },
 
   /** when your routing map is too long, you can split it into small modules **/
   componentsRouter,

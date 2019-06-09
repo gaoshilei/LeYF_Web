@@ -5,7 +5,6 @@ import Layout from '@/layout/Admin'
 import componentsRouter from './modules/components'
 import chartsRouter from './modules/charts'
 import tableRouter from './modules/table'
-import nestedRouter from './modules/nested'
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -91,19 +90,6 @@ export const adminConstantRoutes = [
     ]
   },
   {
-    path: '/admin/guide',
-    component: Layout,
-    redirect: '/admin/guide/index',
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/admin/views/guide/index'),
-        name: 'Guide',
-        meta: { title: 'Guide', icon: 'guide', noCache: true }
-      }
-    ]
-  },
-  {
     path: '/admin/profile',
     component: Layout,
     redirect: '/admin/profile/index',
@@ -182,7 +168,6 @@ export const adminAsyncRoutes = [
   /** when your routing map is too long, you can split it into small modules **/
   componentsRouter,
   chartsRouter,
-  nestedRouter,
   tableRouter,
 
   {
@@ -226,43 +211,6 @@ export const adminAsyncRoutes = [
         component: () => import('@/admin/views/tab/index'),
         name: 'Tab',
         meta: { title: 'Tab', icon: 'tab' }
-      }
-    ]
-  },
-
-  {
-    path: '/admin/excel',
-    component: Layout,
-    redirect: '/excel/export-excel',
-    name: 'Excel',
-    meta: {
-      title: 'Excel',
-      icon: 'excel'
-    },
-    children: [
-      {
-        path: 'export-excel',
-        component: () => import('@/admin/views/excel/export-excel'),
-        name: 'ExportExcel',
-        meta: { title: 'Export Excel' }
-      },
-      {
-        path: 'export-selected-excel',
-        component: () => import('@/admin/views/excel/select-excel'),
-        name: 'SelectExcel',
-        meta: { title: 'Export Selected' }
-      },
-      {
-        path: 'export-merge-header',
-        component: () => import('@/admin/views/excel/merge-header'),
-        name: 'MergeHeader',
-        meta: { title: 'Merge Header' }
-      },
-      {
-        path: 'upload-excel',
-        component: () => import('@/admin/views/excel/upload-excel'),
-        name: 'UploadExcel',
-        meta: { title: 'Upload Excel' }
       }
     ]
   },

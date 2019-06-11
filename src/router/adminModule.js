@@ -3,7 +3,6 @@ import Layout from '@/layout/Admin'
 
 /* Router Modules */
 import componentsRouter from './modules/components'
-import chartsRouter from './modules/charts'
 import tableRouter from './modules/table'
 
 /**
@@ -101,7 +100,6 @@ export const adminAsyncRoutes = [
 
   /** when your routing map is too long, you can split it into small modules **/
   componentsRouter,
-  chartsRouter,
   tableRouter,
 
   {
